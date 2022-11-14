@@ -21,4 +21,4 @@ def alphabet_sort(list):  # Функция сортировки списка
         list.remove(base)  # И удаляем этот элемент из списка, чтобы не было повтора
         less = [i for i in list if check(i.lower(), base.lower())]  # Записываем в список, все значения которые идут раньше опорного
         greater = [i for i in list if check(base.lower(), i.lower())]  # Записываем в список, все значения которые идут позже опорного
-        return alphabet_sort(less) + [base] + alphabet_sort(greater)  # Создаём рекурсию для дальнейшей проверки и суммируем всё
+        return alphabet_sort(less) + [base] + alphabet_sort(greater)  # Создаём рекурсию для дальнейшей проверки и складываем все части списка
